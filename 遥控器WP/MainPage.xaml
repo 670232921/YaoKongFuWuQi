@@ -1,0 +1,43 @@
+﻿<phone:PhoneApplicationPage
+    x:Class="遥控器WP.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+    xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    FontFamily="{StaticResource PhoneFontFamilyNormal}"
+    FontSize="{StaticResource PhoneFontSizeNormal}"
+    Foreground="{StaticResource PhoneForegroundBrush}"
+    SupportedOrientations="Portrait" Orientation="Portrait"
+    shell:SystemTray.IsVisible="True">
+    <Grid x:Name="LayoutRoot" Background="Transparent">
+        <StackPanel>
+            <StackPanel HorizontalAlignment="Center" Orientation="Horizontal">
+                <Button Content="Ctrl" Margin="20,0,20,0"/>
+                <Button Content="Mouse" Margin="20,0,20,0"/>
+            </StackPanel>
+            <StackPanel Name="Ctrl" Visibility="Visible">
+                <StackPanel HorizontalAlignment="Center">
+                    <StackPanel HorizontalAlignment="Center">
+                        <Button Content="Play" Tap="Button_Tap" Tag="Start"/>
+                    </StackPanel>
+                    <StackPanel HorizontalAlignment="Center" Orientation="Horizontal">
+                        <Button Content="FastForward" Margin="20,0,20,0" Tap="Button_Tap" Tag="FastForward"/>
+                        <Button Content="FastBackward" Margin="20,0,20,0" Tap="Button_Tap" Tag="FastBackward"/>
+                    </StackPanel>
+                    <StackPanel HorizontalAlignment="Center" Orientation="Horizontal">
+                        <Button Content="Previous" Margin="20,0,20,0" Tap="Button_Tap" Tag="Previous"/>
+                        <Button Content="Next" Margin="20,0,20,0" Tap="Button_Tap" Tag="Next"/>
+                    </StackPanel>
+                    <TextBlock Text="test" Name="TestText"/>
+                </StackPanel>
+            </StackPanel>
+            <StackPanel Name="Mouse" Visibility="Collapsed">
+
+            </StackPanel>
+        </StackPanel>
+    </Grid>
+
+</phone:PhoneApplicationPage>
